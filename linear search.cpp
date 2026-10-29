@@ -1,0 +1,48 @@
+#include<iostream>
+using namespace std;
+int linear_search (int a[], int n, int x)
+{
+for(int i=0; i<n; i++)
+
+{
+if(a[i]==x){
+return (i);
+}}
+return(-1);
+}
+
+int main()
+{
+    int a[10],x,n;
+    cout<<"How many elements ";
+    cin>>n;
+    cout<<"Enter "<<n<<" Elements"<<endl;
+    for(int i=0; i<n; i++)
+    {
+        cin>>a[i];
+
+    }
+    cout<<"Enter the element to be searched  ";
+    cin>>x;
+    int position=linear_search(a, n, x);
+    if (position==-1) 
+    cout<<"Element not found";
+    else cout <<"Element found at index "<<position;
+
+    return (0);
+}
+
+
+// output :
+// PS D:\Sagar> cd "d:\Sagar\" ; if ($?) { g++ linearsearch.cpp -o linearsearch } ; if ($?) { .\linearsearch }
+// How many elements 6
+// Enter 6 Elements
+// 4
+// 5
+// 7
+// 8
+// 3
+// 7
+// Enter the element to be searched  
+// 4
+// Element found at index 0
